@@ -83,4 +83,5 @@ Para este test, se implemento un 4 test_cases. En la funcion, se condicionó a c
 ## 🤔 Supuestos y Decisiones
 
 *[Si tuviste que tomar algún supuesto o decisión de diseño, explícalo aquí]*
+En primera instancia me cuestione si era la forma correcta, asi como en el ejemplo visual entraban 5, pero de costado cabian 2 mas y sobraba la mitad de otro. pero al ser cuadrados y rectangulos, con angulos rectos, es bastante mas facil calcular las areas. como cuando compramos ceramica para el piso (salen los metros que rinde por caja)
 
