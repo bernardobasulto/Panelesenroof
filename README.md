@@ -64,6 +64,11 @@ Si completaste alguno de los ejercicios bonus, explica tu solución aquí:
 
 ### Bonus Implementado
 *[Indica cuál bonus implementaste: Opción 1 (techo triangular) o Opción 2 (rectángulos superpuestos)]*
+Implementé techo Triangulo
+
+### Explicación del Bonus
+*[Explica cómo adaptaste tu algoritmo para resolver el bonus]*
+
 Para el caso del triangulo es un poco mas complejo, ya que la altura varia linealmente, por lo cual no tenemos la misma area que en la base como en la punta. lo mejor es ir diviendo el triangulo en filas, dependiendo de cuantas quepan en la altura del triangulo.
 En cada fila, el ancho disponible se va reduciendo. 
 por lo cual en cada iteracion nuestro alto disponible sera el disponible menos la altura del panel, en la segunda iteraciones, el disponible menos la altura de 2 paneles, etc.
@@ -71,11 +76,6 @@ por lo cual en cada iteracion nuestro alto disponible sera el disponible menos l
 En este caso solo se intento e implemento posicionar los objetos verticalmente, ya que tambien podria haber algunas formas geometricas en las que se deba calcular la cantidad pero de costado, b x a
 
 Para este test, se implemento un 4 test_cases. En la funcion, se condicionó a cuando el roof fuese como el test 4 osea (6 x 6)
-
-### Explicación del Bonus
-*[Explica cómo adaptaste tu algoritmo para resolver el bonus]*
-
-
 
 
 ---

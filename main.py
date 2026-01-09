@@ -9,21 +9,17 @@ def calculate_panels(panel_width: int, panel_height: int,
         total_panels = 0
         current_height = 0
 
-    # Recorremos el triángulo fila por fila
-        while current_height + panel_width <= roof_height:
+        while current_height + panel_height <= roof_height:
 
-            # 1. Ancho disponible a esta altura
-            remaining_ratio = 1 - (current_height / roof_height)
-            available_width = roof_width * remaining_ratio
+        # ancho mínimo disponible en toda la fila
+            effective_height = current_height + panel_height
+            width = roof_width * (1 - effective_height / roof_height)
 
-            # 2. Paneles que caben en esta fila
-            panels_in_row = int(available_width // panel_width)
-
-            # 3. Acumulamos
-            total_panels += panels_in_row          
-
-            # 4. Subimos a la siguiente fila
+            panels_in_row = int(width // panel_width)
+            total_panels += panels_in_row
+            
             current_height += panel_height
+
 
         return total_panels
         
