@@ -36,6 +36,26 @@ Tu solución debe pasar los siguientes casos de prueba:
 
 Deja acá el link a tu video explicando tu solución con tus palabras
 
+https://drive.google.com/file/d/1nD-kodD_MnUbScxIk0-8ALCEgyN837ot/view
+
+
+Documentacion:
+
+    Para resolver el problema, en primera instancia se plantean la capacidad fisica de poder colocar un panel en las dimensiones del techo. por lo cual primero se verifica que el panel, no sea mas grande que las medidas del techo. para que no quede sobrando.
+    luego al ser un techo cuadrado, se puede calcular el area de los paneles como del techo y ver cuantas veces enteras cabe el area del panel en el area del techo, retornando el valor entero de cuantos paneles caben.
+
+    primero se valida que las dimenciones del panel, no sean mayores a las del roof
+
+    posterior se crean variables para poder resolver los calculos matematicos: 
+    area_panel se encarga de calcular el area del panel
+    area_roof se encarga de calcular el area del roof o techo
+
+    finalmente, se retorna el valor de la division entera entre area_roof / area_panel
+    en caso de que el panel sea mayor a las dimensiones del roof, devulve 0 (es la cantidad de paneles que caben)
+
+
+    Para el caso bonus, se complica, ya que no tenemos la ventaja de poder calcular el area, debido a que el triangulo isoceles u otro, no tiene la misma altura en su base que en su techo. por lo cual primero habria que hacer calculos mas complejos para poder recalcular la altura, ya que en el triangulo no sera la misma, y el ancho disponible tampoco es esacto, creo que la mejor forma seria partiendo el triangulo a la mitad, para tener po lo menos un angulo recto donde posicion el primer panel. luego ver si la base del panel alcanza en la base restante, recalculando la altura maxima, a la que tiene el triangulo.
+
 ---
 
 ## 💰 Bonus (Opcional)
