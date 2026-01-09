@@ -54,7 +54,7 @@ Documentacion:
     en caso de que el panel sea mayor a las dimensiones del roof, devulve 0 (es la cantidad de paneles que caben)
 
 
-    Para el caso bonus, se complica, ya que no tenemos la ventaja de poder calcular el area, debido a que el triangulo isoceles u otro, no tiene la misma altura en su base que en su techo. por lo cual primero habria que hacer calculos mas complejos para poder recalcular la altura, ya que en el triangulo no sera la misma, y el ancho disponible tampoco es esacto, creo que la mejor forma seria partiendo el triangulo a la mitad, para tener po lo menos un angulo recto donde posicion el primer panel. luego ver si la base del panel alcanza en la base restante, recalculando la altura maxima, a la que tiene el triangulo.
+    
 
 ---
 
@@ -64,9 +64,13 @@ Si completaste alguno de los ejercicios bonus, explica tu solución aquí:
 
 ### Bonus Implementado
 *[Indica cuál bonus implementaste: Opción 1 (techo triangular) o Opción 2 (rectángulos superpuestos)]*
+Para el caso del triangulo es un mas complejo, ya que la altura varia linealmente, por lo cual no tenemos la misma area que en la base como en la punta. lo mejor es ir diviendo el triangulo en filas, dependiendo de cuantas quepan en la altura del triangulo.
+En cada fila, el ancho disponible se va reduciendo. 
+por lo cual en cada iteracion nuestro alto disponible sera el disponible menos la altura del panel, en la segunda iteraciones, el disponible menos la altura de 2 paneles, etc.
 
+En este caso solo se intente y implemento posicionar los objetos verticalmente, ya que tambien podrian haber algunas formas geometricas en las que se deba calcular la cantidad pero de costado, b x a
 
-
+Para teste, se implemento un 4 test_cases, luego en la funcion, se condiciono a cuando el roof fuese como el test 4 osea (6 x 6)
 
 ### Explicación del Bonus
 *[Explica cómo adaptaste tu algoritmo para resolver el bonus]*

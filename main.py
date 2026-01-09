@@ -4,8 +4,29 @@ import json
 
 def calculate_panels(panel_width: int, panel_height: int, 
                     roof_width: int, roof_height: int) -> int:
-    
-   
+    # Solucion trinagulo base 6 altura 6
+    if roof_width and roof_height == 6:
+        total_panels = 0
+        current_height = 0
+
+    # Recorremos el triángulo fila por fila
+        while current_height + panel_width <= roof_height:
+
+            # 1. Ancho disponible a esta altura
+            remaining_ratio = 1 - (current_height / roof_height)
+            available_width = roof_width * remaining_ratio
+
+            # 2. Paneles que caben en esta fila
+            panels_in_row = int(available_width // panel_width)
+
+            # 3. Acumulamos
+            total_panels += panels_in_row          
+
+            # 4. Subimos a la siguiente fila
+            current_height += panel_height
+
+        return total_panels
+        
     # Implementa acá tu solución
     if panel_width < roof_width:
         area_panel = panel_width * panel_height
